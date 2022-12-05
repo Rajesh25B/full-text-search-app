@@ -1,4 +1,4 @@
-# Recipe App API Proxy
+# Posts App API Proxy
 
 NGINX proxy app for our recipe app API
 
