@@ -1,0 +1,35 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.results {
+  display: flex;
+  padding-top: 10px;
+}
+
+#form1 {
+  border: 1px solid rgb(225, 222, 222);
+}
+
+.not-found {
+  padding-left: 420px;
+  /* padding-top: 2px; */
+  /* display: flex;
+  justify-content: center; */
+}
+
+.result {
+  padding: 5px;
+}

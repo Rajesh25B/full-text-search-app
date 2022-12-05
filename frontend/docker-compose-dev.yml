@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  app:
+    # stdin_open: true # use stdin_open when you need to work on a project outside the Docker container.
+    # tty: true # use tty when you need to work on a project inside the Docker container.
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    env_file:
+      - ./.env
+  proxy:
+    image: server:latest
+    depends_on:
+      - app
+    ports:
+      - "3000:80"
+    volumes:
+      - static_data:/vol/static
+
+volumes:
+  static_data:
